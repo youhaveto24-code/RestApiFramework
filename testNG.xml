@@ -3,17 +3,23 @@
 
 <suite name="PETSuite">
 
-    <listeners>
-        <listener class-name="api.utilities.ExtentReportManager"></listener>
-    </listeners>
-    <test name="PETTest" thread-count="5">
+
+        <listeners>
+            <listener class-name="api.utilities.ExtentReportManager"/>
+            <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+        </listeners>
+
+        <test name="PETTest">
+
+            <classes>
+                <!-- <class name="api.test.DDTests"/> -->
+                <class name="api.test.UserTests2"/>
+            </classes>
+
+        </test>
 
 
-        <classes>
-<!--            <class name="api.test.DDTests"/>-->
-            <class name="api.test.UserTests2"/>
-        </classes>
 
-    </test>
+
 
 </suite>
